@@ -37,8 +37,6 @@ resource "$oms_prj/lib"
 	"rootDensitySolver"	"it.geoframe.blogspot.geoet.rootdensity.solver.RootDensitySolverMain"
 	
 	"readerAirTemperature"			"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
-	"readerWindVelocity"			"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
-	"readerRelativeHumidity"		"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
 	"readerNetRadiation"			"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
 	"readerSoilHeatFlux"			"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
 	"readerAtmosphericPressure"		"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
@@ -173,9 +171,7 @@ resource "$oms_prj/lib"
 				
 //////////////////////////////////////////////// READERS INPUT GEOET////////////////////////////////////////////////////////////
 
-	"readerAirTemperature.file"          		"${home}/data/${site}/AirTemperature_hourly.csv"
-	"readerWindVelocity.file"         		"${home}/data/${site}/Wind_Speed_mean_hourly.csv" 
-	"readerRelativeHumidity.file"         		"${home}/data/${site}/Rel_Hum_hourly.csv"
+	"readerAirTemperature.file"          		"${home}/data/${site}/AirTemperature_hourly.csv" 
 	"readerNetRadiation.file"        		"${home}/data/${site}/Solar_Radiation_mean_hourly.csv" 
 	"readerAtmosphericPressure.file"        	"${home}/data/${site}/SpikeII_nan.csv"
 	"readerSoilHeatFlux.file"         		"${home}/data/${site}/SpikeII_nan.csv"
@@ -187,18 +183,7 @@ resource "$oms_prj/lib"
 	"readerAirTemperature.tEnd"			"${endDate}"
 	"readerAirTemperature.tTimestep"		"${tTimestep}" 
 	"readerAirTemperature.fileNovalue"   		"-9999.0"		
-					                 
-	"readerWindVelocity.idfield"			"ID"  
-	"readerWindVelocity.tStart"       		"${startDate}"
-	"readerWindVelocity.tEnd"         		"${endDate}"
-	"readerWindVelocity.tTimestep"    		"${tTimestep}"
-	"readerWindVelocity.fileNovalue"  		"-9999.0"        
-		
-	"readerRelativeHumidity.idfield"      		"ID"  
-	"readerRelativeHumidity.tStart"       		"${startDate}"
-	"readerRelativeHumidity.tEnd"         		"${endDate}"
-	"readerRelativeHumidity.tTimestep"    		"${tTimestep}"
-	"readerRelativeHumidity.fileNovalue"  		"-9999.0"	
+					                
 		
 				
 	"readerNetRadiation.idfield"     		"ID"
@@ -399,8 +384,6 @@ resource "$oms_prj/lib"
 	"reader_data_topBC.tCurrent"        	"whetgeo.inCurrentDate" //line 460 
 	
 	"readerAirTemperature.outData"			"input.inAirTemperature"
-	"readerWindVelocity.outData"		 	"input.inWindVelocity"
-	"readerRelativeHumidity.outData"		"input.inRelativeHumidity"
 	"readerNetRadiation.outData"			"input.inNetRadiation"
 	"readerAtmosphericPressure.outData"		"input.inAtmosphericPressure"
 	"readerSoilHeatFlux.outData"			"input.inSoilFlux"
