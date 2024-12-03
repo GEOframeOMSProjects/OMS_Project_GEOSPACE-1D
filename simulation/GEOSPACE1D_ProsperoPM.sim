@@ -161,12 +161,12 @@ resource "$oms_prj/lib"
 	// - AverageMethod: compute G as the arithmetic mean of the stress values characterizing the soil column:
 	// - SizeWightedMetod: compute G as the weighted average of the stress values, function of the dimension of the control volumes
 	// - RootDensityWeightedMethod: compute G as the weighted average of the stress values, function of the density of the root
-	"stressfactor.representativeTranspirationSFModel"  	"RootDensityWeightedMethod" 	//SizeWightedMethod, AverageMethod, RootDensityWeightedMethod
-	"stressfactor.representativeEvaporationSFModel"  	"AverageMethod" 	//SizeWightedMethod, AverageMethod
+	"stressfactor.representativeTranspirationSFModel"  "RootDensityWeightedMethod" 	//SizeWightedMethod, AverageMethod, RootDensityWeightedMethod
+	"stressfactor.representativeEvaporationSFModel"  "AverageMethod" 	//SizeWightedMethod, AverageMethod
 					
 	// SPLITTER Methods for eTsBrokerSolver 
-	"eTsBrokerSolver.representativeEsModel"  	"AverageWaterWeightedMethod" 	//SizeWaterWeightedMethod, AverageWaterWeightedMethod //SizeWightedMethod, AverageWeightedMethod
-	"eTsBrokerSolver.representativeTsModel"  	"RootWaterWeightedMethod" 		//SizeWaterWeightedMethod, AverageWaterWeightedMethod, RootWaterWeightedMethod //SizeWightedMethod, AverageWeightedMethod, RootWeightedMethod
+	"eTsBrokerSolver.representativeEsModel"  "AverageWaterWeightedMethod" 	//SizeWaterWeightedMethod, AverageWaterWeightedMethod //SizeWightedMethod, AverageWeightedMethod
+	"eTsBrokerSolver.representativeTsModel"  "RootWaterWeightedMethod" 	//SizeWaterWeightedMethod, AverageWaterWeightedMethod, RootWaterWeightedMethod //SizeWightedMethod, AverageWeightedMethod, RootWeightedMethod
 				        
 	//Parameters for the Radiation Stress
 	"stressfactor.useRadiationStress" 	false

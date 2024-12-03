@@ -177,7 +177,9 @@ resource "$oms_prj/lib"
 	"readerSoilHeatFlux.file"         		"${home}/data/${site}/SpikeII_nan.csv"
 
 //////////////////////////////////////////////// END of Parameters Setting //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			
+	
+    
+    "readerAirTemperature.file"          		"${home}/data/${site}/AirTemperature_hourly.csv" 		
 	"readerAirTemperature.idfield"       		"ID"  
 	"readerAirTemperature.tStart"        		"${startDate}"
 	"readerAirTemperature.tEnd"			"${endDate}"
@@ -302,12 +304,13 @@ resource "$oms_prj/lib"
 	"PtEt.evapoTranspirationPT" 	"inputbroker.transpiration"
 //////////////// //////////////// //////////////// //////////////// //////////////// //////////////// //////////////// //////////////// 	
 			//Out				//In
-	"whetgeo.doProcess0"		"input.doProcess0"
-	"input.doProcess1"    		"rootDensitySolver.doProcess1"
+	"whetgeo.doProcess0"		    "input.doProcess0"
+	"input.doProcess1"    		    "rootDensitySolver.doProcess1"
 	"rootDensitySolver.doProcess2"	"stressfactor.doProcess2"						 
 	"stressfactor.doProcess3"   	"PtEt.doProcess3"
-	"PtEt.doProcess4"		"inputbroker.doProcess6"
-	"inputbroker.doProcess7"	"eTsBrokerSolver.doProcess7"
+	"PtEt.doProcess4"		        "inputbroker.doProcess6"
+	
+    "inputbroker.doProcess7"	    "eTsBrokerSolver.doProcess7"
 	"eTsBrokerSolver.doProcess8"	"output.doProcess8"
 	
 	"readNetCDF.z"                      "whetgeo.z"
