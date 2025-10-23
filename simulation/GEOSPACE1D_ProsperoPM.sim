@@ -15,10 +15,10 @@ resource "$oms_prj/lib"
 
 		components {
 	// WHETGEO components
-	"readNetCDF" 			"it.geoframe.blogpsot.netcdf.monodimensionalproblemtimedependent.ReadNetCDFGEOSPACEGrid1D"
+	"readNetCDF" 			"it.geoframe.blogspot.netcdf.monodimensionalproblemtimedependent.ReadNetCDFGEOSPACEGrid1D"
 	"whetgeo" 			"it.geoframe.blogspot.whetgeo1d.richardssolver.RichardsRootSolver1DMain"
 	"buffer" 			"it.geoframe.blogspot.buffer.buffertowriter.GEOSPACEBuffer1D"
-	"writeNetCDF" 			"it.geoframe.blogpsot.netcdf.monodimensionalproblemtimedependent.WriteNetCDFGEOSPACE1DDouble"
+	"writeNetCDF" 			"it.geoframe.blogspot.netcdf.monodimensionalproblemtimedependent.WriteNetCDFGEOSPACE1DDouble"
 	
 	"reader_data_topBC"    		"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
 	"reader_data_bottomBC" 		"org.hortonmachine.gears.io.timedependent.OmsTimeSeriesIteratorReader"
